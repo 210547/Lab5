@@ -1,0 +1,54 @@
+<html>
+<head>
+<title> Lab 5 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+	
+PImage waterBottle;
+PImage sprite;
+PImage hersheys;
+
+void setup(){
+
+size( 800, 500 );
+background(255,255,255);
+frameRate( 30 );
+ 
+
+fill(100,0,255);
+stroke(100,0,255);
+rect(160,400,140,50);
+rect(405,400,140,50);
+rect(630,400,140,50);
+
+fill(255,255,0);
+textSize(30);
+text("$7.00",193,435);
+text("$10.00",428,435);
+text("$6.00",662,435);
+
+waterBottle = loadImage("images/waterBottle.jpg");
+sprite = loadImage("images/Sprite.jpeg"); 
+hersheys = loadImage("images/Hersheys.jpg");
+
+
+}
+
+
+void draw()
+{
+
+image(waterBottle,150,0);
+image(sprite,400,0,150,400);
+image(hersheys,600,230);
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
