@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Lab 5 </title>
+<script src="scripts/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+	
+
+
+void setup()
+{
+	size( 800, 500 );
+	frameRate( 30 );
+}
+
+
+void draw()
+{
+	background(0,0,0);	
+
+	fill(255,0,0);
+	rect(50,50,200,100);
+
+	text(mouseX,20,20);
+	text(mouseY,20,40);
+
+	if	(mouseX > 300)
+	{
+		fill(255,255,0);
+		text("Hello World",300,300);
+	}
+
+	if	(mouseX > 500 )
+	{
+		fill(0,255,0);
+		text("Hello World",300,300);
+	}
+
+	if (mouseX > 100 && mouseX < 200 && mouseY > 200 && mouseY < 400)
+	{
+		text("Hi",150,300);
+	}
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

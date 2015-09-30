@@ -8,40 +8,73 @@ PImage waterBottle;
 PImage sprite;
 PImage hersheys;
 
-void setup(){
-
-size( 800, 500 );
-background(255,255,255);
-frameRate( 30 );
- 
-
-fill(100,0,255);
-stroke(100,0,255);
-rect(160,400,140,50);
-rect(405,400,140,50);
-rect(630,400,140,50);
-
-fill(255,255,0);
-textSize(30);
-text("$7.00",193,435);
-text("$10.00",428,435);
-text("$6.00",662,435);
-
-waterBottle = loadImage("images/waterBottle.jpg");
-sprite = loadImage("images/Sprite.jpeg"); 
-hersheys = loadImage("images/Hersheys.jpg");
+void setup()
+{
+	size( 800, 500 );
+	frameRate( 30 );
 
 
+	waterBottle = loadImage("images/waterBottle.jpg");
+	sprite = loadImage("images/Sprite.jpeg"); 
+	hersheys = loadImage("images/Hersheys.jpg");
 }
 
 
 void draw()
 {
+	background(255,255,255);
+	
+	fill(100,0,255);
+	stroke(100,0,255);
+	rect(160,400,140,50); //water
+	rect(405,400,140,50); //sprite
+	rect(630,400,140,50); //hershey
 
-image(waterBottle,150,0);
-image(sprite,400,0,150,400);
-image(hersheys,600,230);
-
+	fill(255,255,0);
+	textSize(30);
+	text("$7.00",193,435); //water
+	text("$10.00",428,435); //sprite
+	text("$6.00",662,435); //hershey
+	
+	image(waterBottle,150,0);
+	image(sprite,400,0,150,400);
+	image(hersheys,600,230);
+	
+	//water
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX >= 160 && mouseX <= 300 && mouseY >= 400 && mouseY <= 450)
+		{
+			fill(0,255,255);
+			rect(160,400,140,50);
+			fill(255,0,0);
+			text("$7.00",193,435);
+		}
+	}	
+	
+	//sprite
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX >= 405 && mouseX <= 545 && mouseY >= 400 && mouseY <= 450)
+		{
+			fill(0,255,255);
+			rect(405,400,140,50);
+			fill(255,0,0);
+			text("$10.00",428,435);
+		}
+	}
+	
+	//hershey
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		if (mouseX >= 630 && mouseX <= 770 && mouseY >= 400 && mouseY <= 450)
+		{
+			fill(0,255,255);
+			rect(630,400,140,50);
+			fill(255,0,0);
+			text("$6.00",662,435);
+		}
+	}
 }
 
 </script>
